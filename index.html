@@ -17,7 +17,17 @@
   p {
     margin: 0;
   }
-  
+
+  div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+  }
+
   a,
   a:visited {
     border-bottom: 1px solid #eee;
@@ -26,11 +36,11 @@
     text-decoration: none;
     transition: border-bottom .2s .2s;
   }
-  
+
   a:hover {
     border-bottom-color: #ccc;
   }
-  
+
   img {
     height: auto;
     margin: 2rem;
@@ -40,8 +50,10 @@
 </head>
 
 <body>
-  <img src="/feature_sm.jpg">
-  <h1>Brian Gervais makes it happen.</h1>
-  <p>He works for <a href="http://www.mssd14.org">Manitou Springs School District</a>.</p>
+  <div>
+    <img src="/feature_sm.jpg">
+    <h1>Brian Gervais makes it happen.</h1>
+    <p>He works for <a href="http://www.mssd14.org">Manitou Springs School District</a>.</p>
+  </div>
 </body>
 </html>
