@@ -48,10 +48,23 @@
   }
 
   img {
+    border: 3px solid black;
+    display: block;
     height: auto;
     margin: 2rem;
-    max-width: 12rem;
+    max-width: 15rem;
+    position: relative;
   }
+
+  img::before {
+    background: black;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
 </style>
 </head>
 
