@@ -47,16 +47,12 @@
     border-bottom-color: #ccc;
   }
 
-  img {
+  figure {
     border: 3px solid black;
-    display: block;
-    height: auto;
-    margin: 2rem;
-    max-width: 15rem;
-    position: relative;
+    padding: 1rem;
   }
 
-  img::before {
+  figure::before {
     background: black;
     content: "";
     height: 100%;
@@ -66,12 +62,24 @@
     width: 100%;
   }
 
+  img {
+    border: 3px solid black;
+    display: block;
+    height: auto;
+    margin: 2rem;
+    max-width: 15rem;
+    position: relative;
+  }
+
 </style>
 </head>
 
 <body>
   <div>
-    <img src="/feature_sm.jpg">
+    <figure>
+      <img src="/feature_sm.jpg">
+    </figure>
+    
     <h1>Brian Gervais makes it happen.</h1>
     <p>He works for <a href="http://www.mssd14.org">Manitou Springs School District</a>.</p>
   </div>
