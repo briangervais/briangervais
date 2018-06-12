@@ -66,6 +66,9 @@
     top: -2rem;
     width: 100%;
     z-index: -1;
+
+    animation-name: magic1;
+    animation-duration: 4s;
   }
 
   figure::after {
@@ -77,6 +80,9 @@
     top: 2rem;
     width: 100%;
     z-index: -1;
+
+    animation-name: magic2;
+    animation-duration: 4s;
   }
 
   img {
@@ -85,6 +91,44 @@
     margin: 0;
     max-width: 15rem;
     position: relative;
+  }
+
+  @keyframes magic1 {
+    0%   {
+      left: 2rem;
+      top: -2rem;
+    }
+    25%  {
+      left: 0;
+      top: 0;
+    }
+    50%  {
+      left: 2rem;
+      top: 2rem;
+    }
+    75% {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  @keyframes magic2 {
+    0%   {
+      left: -2rem;
+      top: 2rem;
+    }
+    25%  {
+      left: 0;
+      top: 0;
+    }
+    50%  {
+      left: -2rem;
+      top: -2rem;
+    }
+    75% {
+      left: 0;
+      top: 0;
+    }
   }
 
 </style>
