@@ -41,7 +41,7 @@
   a:visited {
     border-bottom: 1px solid #eee;
     padding-bottom: 2px;
-    color: rgba(255, 105, 180);
+    color: rgba(255, 105, 180, 1);
     text-decoration: none;
     transition: border-bottom .2s .2s;
   }
@@ -95,39 +95,53 @@
 
   @keyframes magic1 {
     0%   {
+      background: rgba(0, 0, 0, .25);
       left: 2rem;
       top: -2rem;
+      transform: rotate(0deg);
     }
     25%  {
       left: 0;
       top: 0;
+      transform: rotate(90deg);
     }
     50%  {
+      background: rgba(255, 105, 180, 1);
       left: 2rem;
       top: 2rem;
+      transform: rotate(0deg);
     }
     75% {
       left: 0;
       top: 0;
+      transform: rotate(90deg);
     }
   }
 
   @keyframes magic2 {
     0%   {
+      background: rgba(0, 0, 0, .25);
       left: -2rem;
       top: 2rem;
+      transform: rotate(0deg);
     }
     25%  {
+      background: rgba(255, 105, 180, 1);
       left: 0;
       top: 0;
+      transform: rotate(180deg);
     }
     50%  {
+      background: rgba(0, 0, 0, .25);
       left: -2rem;
       top: -2rem;
+      transform: rotate(0deg);
     }
     75% {
+      background: rgba(255, 105, 180, 1);
       left: 0;
       top: 0;
+      transform: rotate(180deg);
     }
   }
 
