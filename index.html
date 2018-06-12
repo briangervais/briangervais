@@ -96,52 +96,60 @@
   @keyframes magic1 {
     0%   {
       background: rgba(0, 0, 0, .25);
+      height: 100%;
       left: 2rem;
       top: -2rem;
-      transform: rotate(0deg);
+      width: 100%;
     }
     25%  {
-      left: 0;
-      top: 0;
-      transform: rotate(90deg);
+      height: calc(100% - 2rem);
+      left: 1rem;
+      top: 1rem;
+      width: calc(100% - 2rem);
     }
     50%  {
       background: rgba(255, 105, 180, 1);
+      height: 100%;
       left: 2rem;
       top: 2rem;
-      transform: rotate(0deg);
+      width: 100%;
     }
     75% {
-      left: 0;
-      top: 0;
-      transform: rotate(90deg);
+      height: calc(100% - 2rem);
+      left: 1rem;
+      top: 1rem;
+      width: calc(100% - 2rem);
     }
   }
 
   @keyframes magic2 {
     0%   {
       background: rgba(0, 0, 0, .25);
+      height: 100%;
       left: -2rem;
       top: 2rem;
-      transform: rotate(0deg);
+      width: 100%;
     }
     25%  {
       background: rgba(255, 105, 180, 1);
-      left: 0;
-      top: 0;
-      transform: rotate(180deg);
+      height: calc(100% - 2rem);
+      left: 1rem;
+      top: 1rem;
+      width: calc(100% - 2rem);
     }
     50%  {
       background: rgba(0, 0, 0, .25);
+      height: 100%;
       left: -2rem;
       top: -2rem;
-      transform: rotate(0deg);
+      width: 100%;
     }
     75% {
       background: rgba(255, 105, 180, 1);
-      left: 0;
-      top: 0;
-      transform: rotate(180deg);
+      height: calc(100% - 2rem);
+      left: 1rem;
+      top: 1rem;
+      width: calc(100% - 2rem);
     }
   }
 
