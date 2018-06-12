@@ -69,7 +69,7 @@
 
     animation-delay: 1.4s;
     animation-name: magic1;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
   }
 
@@ -85,7 +85,7 @@
 
     animation-delay: 1.4s;
     animation-name: magic2;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
   }
 
@@ -109,12 +109,14 @@
       height: calc(100% - 1rem);
       left: 0;
       top: 0;
+      transform: rotate(0deg);
     }
     100%  {
       background: rgba(0, 0, 0, .25);
       height: 100%;
       left: 2rem;
       top: 2rem;
+      transform: rotate(90deg);
     }
   }
 
@@ -130,12 +132,14 @@
       height: calc(100% - 1rem);
       left: 0;
       top: 1rem;
+      transform: rotate(0deg);
     }
     100%  {
       background: rgba(0, 0, 0, .25);
       height: 100%;
       left: -2rem;
       top: -2rem;
+      transform: rotate(-90deg);
     }
   }
 
