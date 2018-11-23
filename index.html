@@ -202,13 +202,13 @@
   }
 
   .section--3up {
-    align-items: flex-start;
+    /* align-items: flex-start; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .section--3up article {
+  .section--3up-article {
     background: #333;
     color: white;
     flex-basis: 100%;
@@ -241,32 +241,31 @@
   }
 
   @media screen and (min-width: 600px) {
-    .section--3up article {
+    .section--3up-article-lg {
       flex-basis: calc(50% - .6667rem);
       margin-bottom: 1rem;
     }
   }
 
   @media screen and (min-width: 900px) {
-    .section--3up article {
+    .section--3up-article-lg {
+      flex-basis: calc(66.666% - .6667rem);
+      margin-bottom: 0;
+    }
+
+    .section--3up-article-sm {
       flex-basis: calc(33.333% - .6667rem);
     }
   }
 
   @media screen and (min-width: 900px) {
     .section--3up article:nth-of-type(3n + 1) {
-      margin-bottom: 3rem;
-      margin-top: 2rem;
     }
 
     .section--3up article:nth-of-type(3n + 2) {
-      margin-bottom: -1rem;
-      margin-top: 0rem;
     }
 
     .section--3up article:nth-of-type(3n + 3) {
-      margin-bottom: 1rem;
-      margin-top: 2rem;
     }
   }
 
@@ -283,8 +282,15 @@
     background: #333;
     color: #ccc;
     display: flex;
+    flex: 1;
+    font-size: 12px;
     height: 70px;
     justify-content: space-between;
+    text-align: center;
+  }
+
+  .footer p {
+    flex: 1;
   }
 
   .footer--fixed {
@@ -331,25 +337,25 @@
 
       <section class="section section--3up section--constrained">
 
-        <article class="section section--padded">
+        <article class="section section--padded section--3up-article section--3up-article-lg">
           <div class="image--fixed" style="background-image: url('./images/code.jpg')">
           </div>
           <h2>Design & Code</h2>
           <p>Brian is a UI/UX designer who can code.  He is currently accepting freelance work on a limited basis.</p>
         </article>
 
-        <article class="section section--padded">
-          <!-- <div class="image--fixed" style="background-image: url('./images/gif/stars.webp')"> -->
+        <!-- <article class="section section--padded">
+          <div class="image--fixed" style="background-image: url('./images/gif/stars.webp')">
           <div class="image--fixed" style="background-image: url('./images/coins.jpg!d')">
           </div>
           <h2>Entrepreneur</h2>
           <p>Brian and his partner are AirBnb <em>Superhosts</em>.  They operate <a href="https://www.airbnb.com/rooms/21795942" title="Mountain Modern on AirBnb">Modern Modern</a>, a quiet and centrally-located short-term rental near Garden of the Gods in Colorado Springs, CO.</p>
-        </article>
+        </article> -->
 
-        <article class="section section--padded">
+        <article class="section section--padded section--3up-article section--3up-article-sm">
           <div class="image--fixed" style="background-image: url('./images/colors-rainbow.jpg')">
           </div>
-          <h2>Teacher</h2>
+          <h2>101</h2>
           <p>Brian is teaching a <a href="https://www.connect14.org/stem-14/website-graphic-design" title="Website Graphic Design">Website Graphic Design</a> class to High School students at Manitou Springs High School in 2019.</p>
         </article>
 
