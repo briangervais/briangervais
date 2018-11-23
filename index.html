@@ -23,24 +23,7 @@
       }
     }
 
-    var time = 250;
-
-    // If slides are visible, hide the last slide
-    // has_slides = true;
-    //
-    // my_function(){};
-    //
-    // setInterval(my_function,10000);
-    //
-    // if (slides.is(':visible')) {
-    //   console.log('YEP');
-    // }
-    //
-    // slides.each(function(index) {
-    //   $(this).delay(time * index).queue(function() {
-    //     $(this).remove();
-    //   });
-    // });
+    var time = 100;
   });
 
 </script>
@@ -52,6 +35,7 @@
   body {
     color: #333;
     font-family: 'Raleway', sans-serif;
+    font-size: 18px;
     margin: 0;
   }
 
@@ -64,15 +48,6 @@
   }
 
   body.has-fixed-footer {
-  }
-
-  .content {
-    background-image: url("images/what-the-hex.png");
-    background-position: center;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    padding-bottom: 5rem;
-    z-index: 1;
   }
 
   h1,
@@ -91,7 +66,7 @@
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0 0 1rem;
   }
 
@@ -134,7 +109,6 @@
 
   a,
   a:visited {
-    border-bottom: 1px solid #eee;
     padding-bottom: 2px;
     color: rgba(255, 105, 180, 1);
     text-decoration: none;
@@ -142,7 +116,28 @@
   }
 
   a:hover {
-    border-bottom-color: #ccc;
+  }
+
+  .button {
+    background: #ffe61f;
+    color: #333;
+    display: block;
+    margin: 1.5rem 0 0;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .button:hover {
+    color: white;
+  }
+
+  .content {
+    background-image: url("images/what-the-hex.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding-bottom: 5rem;
+    z-index: 1;
   }
 
   .link--no-decoration {
@@ -167,6 +162,7 @@
   }
 
   .menu--main img {
+    margin: 0;
     width: 45px;
   }
 
@@ -206,6 +202,7 @@
   }
 
   .section--3up {
+    align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -217,6 +214,20 @@
     flex-basis: 100%;
     padding-bottom: 4rem;
     z-index: 1;
+  }
+
+  .section--3up .image--fixed {
+    margin: 0 0 1rem;
+  }
+
+  .section--3up article:nth-of-type(1) .image--fixed {
+    background-position: center;
+    background-size: auto;
+  }
+
+  .section--3up article:nth-of-type(2) .image--fixed {
+    background-position: 0 100%;
+    background-size: auto;
   }
 
   @media screen and (max-width: 899px) {
@@ -291,11 +302,11 @@
   <div class="content">
     <header class="section section--padded header header--fixed">
       <h1 class="title">Brian Gervais</h1>
-      <div class="menu--main">
+      <!-- <div class="menu--main">
         <a href="https://soundcloud.com" title="Soundcloud">
           <img src="images/soundcloud.png" alt="Soundcloud">
         </a>
-      </div>
+      </div> -->
     </header>
     <main>
       <section class="banner">
@@ -323,22 +334,22 @@
         <article class="section section--padded">
           <div class="image--fixed" style="background-image: url('./images/code.jpg')">
           </div>
-          <h2>Code</h2>
-          <p>Brian writes code.  He is proficient in most front-end technology and also dabbles server-side and back-end.</p>
+          <h2>Design & Code</h2>
+          <p>Brian is a UI/UX designer who can code.  He is currently accepting freelance work on a limited basis.</p>
         </article>
 
         <article class="section section--padded">
-          <div class="image--fixed" style="background-image: url('./images/gif/stars.webp')">
-          <!-- <div class="image--fixed" style="background-image: url('./images/what-the-hex.png')"> -->
+          <!-- <div class="image--fixed" style="background-image: url('./images/gif/stars.webp')"> -->
+          <div class="image--fixed" style="background-image: url('./images/coins.jpg!d')">
           </div>
-          <h2>The FUTURE</h2>
-          <p>Brian likes to play soccer.  He enjoys being in nature.  He records <a href="http://soundcloud.com">electronic music</a> in his home studio late at night.</p>
+          <h2>Entrepreneur</h2>
+          <p>Brian and his partner are AirBnb <em>Superhosts</em>.  They operate <a href="https://www.airbnb.com/rooms/21795942" title="Mountain Modern on AirBnb">Modern Modern</a>, a quiet and centrally-located short-term rental near Garden of the Gods in Colorado Springs, CO.</p>
         </article>
 
         <article class="section section--padded">
           <div class="image--fixed" style="background-image: url('./images/colors-rainbow.jpg')">
           </div>
-          <h2>Teaching</h2>
+          <h2>Teacher</h2>
           <p>Brian is teaching a <a href="https://www.connect14.org/stem-14/website-graphic-design" title="Website Graphic Design">Website Graphic Design</a> class to High School students at Manitou Springs High School in 2019.</p>
         </article>
 
