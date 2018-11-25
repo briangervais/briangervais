@@ -71,7 +71,13 @@
   }
 
   h1.title {
-    font-size: 3vw;
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    h1.title {
+      font-size: 3rem;
+    }
   }
 
   h1 a,
@@ -89,7 +95,8 @@
 
   li {
     align-items: center;
-    background: #000;
+    background-color: #000;
+    background-image: url("./images/gif/stars.webp");
     color: white;
     display: flex;
     font-size: 10vw;
@@ -168,27 +175,50 @@
 
   .banner {
     align-items: center;
-    background-color: fuchsia;
-    /* background-image: url('images/lighting-bolt.png'); */
-    background-image: url("./images/lightning-bolt.svg");
-    /* background-image: url("./images/what-the-hex.png"); */
     background-repeat: no-repeat;
     background-position: center 40px;
     background-size: 45vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: calc(100% - 140px);
+    height: calc(100% - 70px);
     justify-content: center;
     left: 0;
     min-height: 22rem;
     position: fixed;
     top: 70px;
     width: 100%;
+    z-index: 1;
+  }
+
+  .banner::after {
+    background-color: transparent;
+    background-image: url("./images/lightning-bolt.svg");
+    background-position: center 40px;
+    background-repeat: no-repeat;
+    background-size: 45vh;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .banner::before {
+    background-image: url("./images/gif/stars.webp");
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
   }
 
   .banner__title-main {
-    color: #333;
+    color: fuchsia;
     font-size: 15vw;
   }
 
@@ -200,7 +230,7 @@
   }
 
   .section--constrained {
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
 
   .section--padded {
@@ -216,7 +246,8 @@
 
   .section--3up-article {
     background: #333;
-    color: white;
+    background-image: url("./images/what-the-hex.png");
+    /* color: white; */
     flex-basis: 100%;
     padding-bottom: 4rem;
     z-index: 1;
@@ -247,9 +278,8 @@
   }
 
   @media screen and (min-width: 600px) {
-    .section--3up-article-lg {
+    .section--3up-article {
       flex-basis: calc(50% - .6667rem);
-      margin-bottom: 1rem;
     }
   }
 
@@ -343,11 +373,14 @@
 
       <section class="section section--3up section--constrained">
 
-        <article class="section section--padded section--3up-article section--3up-article-lg">
+        <article class="section section--3up-article section--3up-article-lg">
           <div class="image--fixed" style="background-image: url('./images/code.jpg')">
           </div>
-          <h2>Design & Code</h2>
-          <p>Brian is a UI/UX designer who can code.  He is currently accepting freelance work on a limited basis.</p>
+          <div class="section--padded">
+            <h2>⚡⚡⚡</h2>
+            <p>Brian is a UI/UX/Web Designer who can code.  He is currently seeking freelance work with businesses and organizations doing good work in this world.</p>
+            <p>Hit him up at <a href="https://twitter.com/briangervais">Twitter</a> or <a href="https://www.linkedin.com/in/briangervais/">LinkedIn</a></p>
+          </div>
         </article>
 
         <!-- <article class="section section--padded">
@@ -358,11 +391,13 @@
           <p>Brian and his partner are AirBnb <em>Superhosts</em>.  They operate <a href="https://www.airbnb.com/rooms/21795942" title="Mountain Modern on AirBnb">Modern Modern</a>, a quiet and centrally-located short-term rental near Garden of the Gods in Colorado Springs, CO.</p>
         </article> -->
 
-        <article class="section section--padded section--3up-article section--3up-article-sm">
+        <article class="section section--3up-article section--3up-article-sm">
           <div class="image--fixed" style="background-image: url('./images/colors-rainbow.jpg')">
           </div>
-          <h2>101</h2>
-          <p>Brian is teaching a <a href="https://www.connect14.org/stem-14/website-graphic-design" title="Website Graphic Design">Website Graphic Design</a> class to High School students at Manitou Springs High School in 2019.</p>
+          <div class="section--padded">
+            <h2>⚡⚡⚡</h2>
+            <p>Brian is teaching a <a href="https://www.connect14.org/stem-14/website-graphic-design" title="Website Graphic Design">Website Graphic Design</a> class to High School students at Manitou Springs High School in 2019.</p>
+          </div>
         </article>
 
       </section>
