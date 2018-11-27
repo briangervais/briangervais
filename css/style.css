@@ -78,6 +78,7 @@ li {
 
 .banner li {
   align-items: center;
+  background-attachment: fixed;
   background-color: #000;
   background-image: url("./../images/gif/stars.webp");
   color: white;
