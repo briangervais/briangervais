@@ -10,343 +10,10 @@
 <meta name="msapplication-TileColor" content="#ff00ff">
 <meta name="theme-color" content="#ff00ff">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Righteous" rel="stylesheet">
-<script type="text/javascript">
-
-  $(document).ready(function() {
-
-    var int = window.setInterval(checkSlides, 250);
-
-    var slides = $('.slide');
-
-    function checkSlides() {
-      if (slides.is(':visible')) {
-        $('.slide:last-of-type').remove();
-      }
-
-      else {
-        clearInterval(int);
-        $('.banner__title-main').fadeIn('slow');
-      }
-    }
-
-    var time = 100;
-  });
-
-</script>
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    color: #333;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    margin: 0;
-  }
-
-  body.has-fixed-header {
-    padding-top: 70px;
-  }
-
-  body.has-fixed-banner {
-    padding-top: calc(70px + 70vh);
-  }
-
-  body.has-fixed-footer {
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Montserrat', serif;
-  }
-
-  h1 {
-    font-size: 10vw;
-    line-height: 1;
-    margin: 0;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin: 0 0 1rem;
-  }
-
-  h1.title {
-    font-size: 2rem;
-  }
-
-  @media screen and (min-width: 600px) {
-    h1.title {
-      font-size: 3rem;
-    }
-  }
-
-  h1 a,
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
-    border: 0;
-  }
-
-  ul {
-    margin: 0;
-  }
-
-  li {
-    align-items: center;
-    background-color: #000;
-    background-image: url("./images/gif/stars.webp");
-    color: white;
-    display: flex;
-    font-size: 10vw;
-    font-weight: bold;
-    justify-content: center;
-    height: 100%;
-    left: 0;
-    line-height: 1;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  a,
-  a:visited {
-    padding-bottom: 2px;
-    color: rgba(255, 105, 180, 1);
-    font-weight: bold;
-    text-decoration: none;
-    transition: border-bottom .2s .2s;
-  }
-
-  a:hover {
-  }
-
-  .button {
-    background: #ffe61f;
-    color: #333;
-    display: block;
-    margin: 1.5rem 0 0;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .button:hover {
-    color: white;
-  }
-
-  .content {
-    background-image: url("./images/what-the-hex.png");
-    background-position: center;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    padding-bottom: 5rem;
-    z-index: 1;
-  }
-
-  .link--no-decoration {
-    border: 0;
-
-  }
-
-  .header {
-    align-items: center;
-    background: rgba(255, 255, 255, .95);
-    display: flex;
-    height: 70px;
-    justify-content: space-between;
-  }
-
-  .header--fixed {
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-  }
-
-  .menu--main img {
-    margin: 0;
-    width: 45px;
-  }
-
-  .banner {
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-size: 45vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 70px);
-    justify-content: center;
-    left: 0;
-    min-height: 22rem;
-    position: fixed;
-    top: 70px;
-    width: 100%;
-    z-index: 1;
-  }
-
-  .banner::after {
-    background-color: transparent;
-    background-image: url("./images/lightning-bolt.svg");
-    background-position: center 40px;
-    background-repeat: no-repeat;
-    background-size: 45vh;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .banner::before {
-    background-image: url("./images/gif/stars.webp");
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-  }
-
-  .banner__title-main {
-    color: fuchsia;
-    font-size: 15vw;
-  }
-
-  .banner__title-main {
-    display: none;
-  }
-
-  .section {
-  }
-
-  .section--constrained {
-    margin: 0 1rem;
-  }
-
-  .section--padded {
-    padding: 1rem;
-  }
-
-  .section--3up {
-    /* align-items: flex-start; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .section--3up-article {
-    background: #333;
-    background-image: url("./images/what-the-hex.png");
-    /* color: white; */
-    flex-basis: 100%;
-    padding-bottom: 4rem;
-    z-index: 1;
-  }
-
-  .section--3up .image--fixed {
-    margin: 0 0 1rem;
-  }
-
-  .section--3up article:nth-of-type(1) .image--fixed {
-    background-position: center;
-    background-size: auto;
-  }
-
-  .section--3up article:nth-of-type(2) .image--fixed {
-    background-position: 0 100%;
-    background-size: auto;
-  }
-
-  @media screen and (max-width: 899px) {
-    .section--3up {
-      margin-top: 4rem;
-    }
-
-    .section--3up article {
-      margin-bottom: 5rem;
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-    .section--3up-article {
-      flex-basis: calc(50% - .6667rem);
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    .section--3up-article-lg {
-      flex-basis: calc(66.666% - .6667rem);
-      margin-bottom: 0;
-    }
-
-    .section--3up-article-sm {
-      flex-basis: calc(33.333% - .6667rem);
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    .section--3up article:nth-of-type(3n + 1) {
-    }
-
-    .section--3up article:nth-of-type(3n + 2) {
-    }
-
-    .section--3up article:nth-of-type(3n + 3) {
-    }
-  }
-
-  .image--fixed {
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 500px;
-    height: 2rem;
-    width: 100%;
-  }
-
-  .footer {
-    align-items: center;
-    background: #333;
-    color: #ccc;
-    display: flex;
-    flex: 1;
-    font-size: 12px;
-    height: 70px;
-    justify-content: space-between;
-    text-align: center;
-  }
-
-  .footer p {
-    flex: 1;
-  }
-
-  .footer--fixed {
-    left: 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-  }
-
-</style>
 </head>
 
 <body class="has-fixed-header has-fixed-banner has-fixed-footer">
@@ -360,8 +27,8 @@
       </div> -->
     </header>
     <main>
-      <section class="banner">
-        <h2 class="banner__title-main">Magic!</h2>
+      <section class="banner banner--home">
+        <h2 class="banner__title-main">#tbh</h2>
         <ul>
           <li class="slide banner__title">Coffee</li>
           <li class="slide banner__title">Colorado</li>
@@ -383,12 +50,13 @@
       <section class="section section--3up section--constrained">
 
         <article class="section section--3up-article section--3up-article-lg">
-          <div class="image--fixed" style="background-image: url('./images/colors-rainbow.jpg')">
+          <div class="image--fixed" style="background-image: url('./images/code2.png')">
           </div>
           <div class="section--padded">
-            <h2>⚡⚡⚡</h2>
-            <p>Brian is a UI/UX/Web Designer who can code.  He is currently seeking freelance work with businesses and organizations doing good work in this world.</p>
+            <h2>Design & Code</h2>
+            <p>Brian is a UI/UX/Web Designer who can code.  He is currently seeking freelance work with businesses, organizations, and agencies doing awesome work.</p>
             <p>Hit him up at <a href="https://twitter.com/briangervais">Twitter</a> or <a href="https://www.linkedin.com/in/briangervais/">LinkedIn</a></p>
+            <p><a href="about.html" class="button" title="About Brian">About Brian</a></p>
           </div>
         </article>
 
@@ -404,8 +72,8 @@
           <div class="image--fixed" style="background-image: url('./images/colors-rainbow.jpg')">
           </div>
           <div class="section--padded">
-            <h2>⚡⚡⚡</h2>
-            <p>Brian is teaching a <a href="https://www.connect14.org/stem-14/website-graphic-design" title="Website Graphic Design">Website Graphic Design</a> class to High School students at Manitou Springs High School in 2019.</p>
+            <h2>101 #tbh</h2>
+            <p>Brian is teaching a <a href="https://www.connect14.org/stem-14/website-graphic-design" title="Website Graphic Design">Website Graphic Design</a> class at Manitou Springs High School in 2019.</p>
           </div>
         </article>
 
@@ -414,7 +82,7 @@
   </div>
 
   <footer class="section section--padded footer">
-    <p>Code & Design by Brian Gervais</p>
+    <p>Custom Web Design by Brian Gervais</p>
     <!-- <p>Want to work together?  Contact Brian</p> -->
   </footer>
 </body>
