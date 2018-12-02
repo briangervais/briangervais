@@ -5,23 +5,16 @@ $(document).ready(function() {
   var articles = $('.section--3up');
 
   function checkSlides() {
+    articles.addClass('animate-show');
+    
     if (slides.is(':visible')) {
       $('.slide:last-of-type').remove();
     }
 
     else {
-      articles.addClass('animate-show');
       $('.banner__title-main').addClass('show');
       clearInterval(int);
     }
   }
-
-  function checkContent() {
-    if ($(window).scrollTop() > 0) {
-      articles.addClass('animate-show');
-    }
-  }
-
-  $(window).on('scroll', checkContent);
 
 });

@@ -220,6 +220,12 @@ a:hover {
   z-index: -1;
 }
 
+@media screen and (max-width: 600px) {
+  .banner--home::after {
+    background-size: 35vh;
+  }
+}
+
 .banner--home::before {
   background-image: url("./../images/gif/stars.webp");
   content: "";
@@ -241,6 +247,12 @@ a:hover {
   color: #f347f3;
   font-size: 15vw;
   transition: all .2s ease-out .2s;
+}
+
+@media screen and (max-width: 600px) {
+  .banner__title-main {
+    font-size: 5rem;
+  }
 }
 
 .banner__title-main.show {
@@ -332,17 +344,17 @@ a:hover {
 }
 
 .section--3up-article-lg .image--fixed {
-  background-position: 0 100%;
+  background-position: 0 90%;
   background-size: cover;
 }
 
 @media screen and (max-width: 899px) {
   .section--3up {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
   }
 
   .section--3up article {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 }
 
