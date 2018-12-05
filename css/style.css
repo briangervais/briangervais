@@ -53,6 +53,16 @@ h4 {
   margin-bottom: 0;
 }
 
+h5 {
+  background: black;
+  color: white;
+  display: inline-block;
+  font-size: .8rem;
+  margin: 0;
+  padding: .25rem;
+  text-transform: uppercase;
+}
+
 dl {
   margin: 0;
 }
@@ -139,13 +149,14 @@ p {
 a,
 a:visited {
   padding-bottom: 2px;
-  color: #f347f3;
+  color: #5878ff;
   font-weight: bold;
   text-decoration: none;
   transition: border-bottom .2s .2s;
 }
 
 a:hover {
+  text-decoration: underline;
 }
 
 .button {
@@ -298,7 +309,14 @@ a:hover {
 }
 
 .banner__title-landing {
+}
 
+.background--gray-light {
+  background: #eee;
+}
+
+.background--white {
+  background: #fff;
 }
 
 .section {
@@ -318,8 +336,8 @@ a:hover {
 }
 
 .section--padded-lg {
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 .section--3up {
@@ -436,6 +454,10 @@ a:hover {
 }
 
 .work-item__image {
+  margin: 2rem 0 4rem;
+}
+
+.work-item__image img {
   border: 2px solid #ccc;
 }
 
@@ -455,6 +477,7 @@ a:hover {
 
 .two-col-container {
   display: flex;
+  margin-bottom: 3rem;
 }
 
 .two-col-container__primary {
