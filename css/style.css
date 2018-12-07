@@ -1,9 +1,9 @@
 @import "base.css";
-@import "_banner.css";
-@import "_button.css";
-@import "_title.css";
-@import "_region.css";
-@import "_background.css";
-@import "_layout.css";
-@import "_work.css";
-@import "_image.css";
+@import "banner.css";
+@import "button.css";
+@import "title.css";
+@import "region.css";
+@import "background.css";
+@import "layout.css";
+@import "work.css";
+@import "image.css";
