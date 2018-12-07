@@ -1,0 +1,14 @@
+.title a,
+.title a:visited {
+  color: black;
+}
+
+.title a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  h1.title {
+    font-size: 3rem;
+  }
+}

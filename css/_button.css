@@ -1,0 +1,48 @@
+.button {
+  background-image: url('../images/gif/stars.webp');
+  background-attachment: fixed;
+  background-position: 0 0;
+  background-repeat: repeat;
+  color: white;
+  display: inline-block;
+  font-family: 'Montserrat', serif;
+  font-weight: bold;
+  margin: 1rem 0;
+  padding: 1.5rem 2rem;
+  position: relative;
+  text-align: center;
+  transition: background 10s ease-in-out, color .15s ease-in-out;
+}
+
+.button::after {
+  background: rgba(88,120,255,.7);
+  bottom: 0;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  transition: all .15s ease-in-out;
+  width: 100%;
+}
+
+.button--slant {
+  clip-path: polygon(0 0, 0 calc(100% - 1rem), 100% 100%, 100% 1rem);
+}
+
+.button--slant:hover {
+  clip-path: polygon(0 0, 0 calc(100% - 1rem), 100% calc(100% - 1rem), 100% 1rem);
+}
+
+.button:visited {
+  color: white;
+}
+
+.button:hover {
+  background-position: 2000px;
+  color: #5878ff;
+  text-decoration: none;
+}
+
+.button:hover::after {
+  height: 5px;
+}

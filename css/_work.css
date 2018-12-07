@@ -1,0 +1,10 @@
+.work-item__image {
+  margin: 2rem 0 4rem;
+}
+
+@media screen and (min-width: 800px) {
+  .work-item__image {
+    margin-left: -10rem;
+    width: calc(100% + 20rem);
+  }
+}

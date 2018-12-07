@@ -1,0 +1,16 @@
+.image--bordered {
+  border: 2px solid;
+  display: block;
+}
+
+.image--bordered-black {
+  border-color: #000;
+}
+
+.image--bordered-gray {
+  border-color: #AAA;
+}
+
+.image--padded {
+  padding: 1px;
+}
