@@ -1,6 +1,7 @@
 .button {
-  background-image: url('../images/gif/stars.webp');
   background-attachment: fixed;
+  background-color: black;
+  background-image: url('../images/gif/stars.webp');
   background-position: 0 0;
   background-repeat: repeat;
   color: white;
@@ -8,10 +9,14 @@
   font-family: 'Montserrat', serif;
   font-weight: bold;
   margin: 1rem 0;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
   position: relative;
   text-align: center;
   transition: background 10s ease-in-out, color .15s ease-in-out;
+}
+
+@media screen and (min-width: 600px) {
+  padding: 1.5rem 2rem;
 }
 
 .button::after {
