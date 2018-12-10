@@ -53,21 +53,23 @@
 .banner--home::after {
   background-color: transparent;
   background-image: url("./../images/lightning-bolt.svg");
-  background-position: center 70px;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 45vh;
+  background-size: 250px;
   content: "";
   height: 100%;
   left: 0;
+  margin-top: -100px;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: -1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .banner--home::after {
-    background-size: 35vh;
+    background-size: 450px;
+    margin-top: -150px;
   }
 }
 
@@ -102,13 +104,19 @@
 .banner__title-main {
   opacity: 0;
   color: #4b83fc;
-  font-size: 15vw;
+  font-size: 6rem;
   transition: all .2s ease-out .2s;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .banner__title-main {
-    font-size: 5rem;
+    font-size: 8rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .banner__title-main {
+    font-size: 10rem;
   }
 }
 
