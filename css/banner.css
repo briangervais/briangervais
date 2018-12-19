@@ -2,7 +2,8 @@
   align-items: center;
   background-attachment: fixed;
   background-color: #000;
-  background-image: url("./../images/gif/stars.webp");
+  /* background-image: url("./../images/gif/stars.webp"); */
+  background-image: url("./../images/gif/stars.gif");
   color: white;
   display: flex;
   font-size: 10vw;
@@ -24,7 +25,8 @@
 }
 
 .banner::before {
-  background-image: url("./../images/gif/stars.webp");
+  /* background-image: url("./../images/gif/stars.webp"); */
+  background-image: url("./../images/gif/stars.gif");
   background-attachment: fixed;
   content: "";
   height: 100%;
@@ -59,7 +61,7 @@
   content: "";
   height: 100%;
   left: 0;
-  margin-top: -100px;
+  /* margin-top: -100px; */
   position: absolute;
   top: 0;
   width: 100%;
@@ -68,13 +70,21 @@
 
 @media screen and (min-width: 600px) {
   .banner--home::after {
+    background-size: 250px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .banner--home::after {
     background-size: 450px;
     margin-top: -150px;
   }
 }
 
 .banner--home::before {
-  background-image: url("./../images/gif/stars.webp");
+  /* background-image: url("./../images/gif/stars.webp"); */
+  background-image: url("./../images/gif/stars.gif");
   content: "";
   height: 100%;
   left: 0;
@@ -102,6 +112,9 @@
 }
 
 .banner__title-main {
+  background: -webkit-linear-gradient(#000, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
   color: #4b83fc;
   font-size: 6rem;
@@ -122,6 +135,9 @@
 
 .banner__title-main.show {
   opacity: 1;
+  background: -webkit-linear-gradient(#FFF, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .banner__title-landing {

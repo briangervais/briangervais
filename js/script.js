@@ -5,7 +5,7 @@ $(document).ready(function() {
   var articles = $('.section--3up');
 
   function checkSlides() {
-    articles.addClass('animate-show');
+    // articles.addClass('animate-show');
 
     if (slides.is(':visible')) {
       $('.slide:last-of-type').remove();
