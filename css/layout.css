@@ -98,6 +98,11 @@
   background-size: cover;
 }
 
+.section--3up-article-bg-normal .image--fixed {
+  background-size: contain;
+  background-attachment: scroll;
+}
+
 @media screen and (max-width: 899px) {
   .section--3up {
     /* margin-top: 4rem; */

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var int = window.setInterval(checkSlides, 150);
+  // var int = window.setInterval(checkSlides, 150);
   var slides = $('.slide');
   var articles = $('.section--3up');
 
