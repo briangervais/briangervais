@@ -54,10 +54,10 @@
 
 .banner--home::after {
   background-color: transparent;
-  background-image: url("./../images/lightning-bolt_time-is-now.svg");
+  background-image: url("./../images/lightning-bolt.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 320px;
+  background-size: 250px;
   content: "";
   height: 100%;
   left: 0;
@@ -70,21 +70,21 @@
 
 @media screen and (min-width: 600px) {
   .banner--home::after {
-    background-size: 400px;
+    /* background-size: 300px; */
     /* margin-top: -150px; */
   }
 }
 
 @media screen and (min-width: 960px) {
   .banner--home::after {
-    background-size: 500px;
+    /* background-size: 325px; */
     /* margin-top: -150px; */
   }
 }
 
 @media screen and (min-width: 1900px) {
   .banner--home::after {
-    background-size: 450px;
+    /* background-size: 350px; */
     margin-top: -150px;
   }
 }
